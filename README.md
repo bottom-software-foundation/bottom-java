@@ -11,6 +11,8 @@ Javadocs [here][javadocs-link]
 
 ## Installing
 
+You can install bottom [from JitPack][JitPack-link]
+
 Add bottom to your Gradle project by adding these lines to your `build.gradle` file:
 ```groovy
 repositories {
@@ -21,7 +23,7 @@ repositories {
 
 dependencies {
      // other dependencies
-     implementation 'com.github.sebbylaw:bottom-java:1.0.0'
+     implementation 'com.github.sebbylaw:bottom-java:1.0.1'
 }
 ```
 
