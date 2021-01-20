@@ -27,7 +27,7 @@ dependencies {
 ## Quick Example
 
 ```java
-import Bottom;
+import com.github.sebbylaw.bottom.Bottom;
 
 public class Main {
     public static void main(String[] args) {
