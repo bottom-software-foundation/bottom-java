@@ -1,4 +1,4 @@
-package com.github.sebbylaw.bottom;
+package com.github.bottomSoftwareFoundation.bottom;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;

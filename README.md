@@ -5,7 +5,7 @@
 [![JitPack][JitPack-image]][JitPack-link]
 [![docs][javadocs-image]][javadocs-link]
 
-A Gradle library for [bottom](https://github.com/kaylynn234/bottom), following the [bottom spec](https://github.com/kaylynn234/bottom-spec).
+A Gradle library for bottom, following the [bottom spec](https://github.com/bottom-software-foundation/bottom-spec).
 
 Javadocs [here][javadocs-link]
 
@@ -23,16 +23,16 @@ repositories {
 
 dependencies {
      // other dependencies
-     implementation 'com.github.sebbylaw:bottom-java:1.0.1'  // latest stable release
+     implementation 'com.github.bottom-software-foundation:bottom-java:1.1.0'  // latest stable release
      // alternatively...
-     implementation 'com.github.sebbylaw:bottom-java:need_top-SNAPSHOT'  // latest commit on github
+     implementation 'com.github.bottom-software-foundation:bottom-java:need_top-SNAPSHOT'  // latest commit on github
 }
 ```
 
 ## Quick Example
 
 ```java
-import com.github.sebbylaw.bottom.Bottom;
+import com.github.bottomSoftwareFoundation.bottom.Bottom;
 
 public class Main {
     public static void main(String[] args) {
@@ -52,23 +52,17 @@ public class Main {
 
 ## More bottom
 
-- [bottom](https://github.com/kaylynn234/bottom) (Rust/CLI)
-- [bottom-py](https://github.com/uYert/bottom-py) (Python Rust bindings)
-- [bottom-c](https://github.com/LyricLy/bottom-c) (C)
-- [bottom-hs](https://github.com/LyricLy/bottom-hs) (Haskell)
-- [bottom-web](https://github.com/kaylynn234/bottom-web/) (Website at https://kaylynn234.github.io/bottom-web/)
-- [bottom_ex](https://github.com/oliver-ni/bottom_ex) (Elixir)
-- [bottom-kotlin](https://github.com/XuaTheGrate/bottom-kotlin) (Kotlin)
+https://github.com/bottom-software-foundation/awesome-bottom
 
 ## Why?
 
 Learning project for Gradle, JUnit4, Github Actions, and JitPack.
 
-[GHAction-image]: https://github.com/SebbyLaw/bottom-java/workflows/CI/badge.svg?branch=master&event=push
-[GHAction-link]: https://github.com/SebbyLaw/bottom-java/actions?query=event%3Apush+branch%3Amaster
-[LICENSE-image]: https://img.shields.io/github/license/SebbyLaw/bottom-java
-[LICENSE-link]: https://github.com/SebbyLaw/bottom-java/blob/master/LICENSE
-[JitPack-image]: https://jitpack.io/v/com.github.sebbylaw/bottom-java.svg
-[JitPack-link]: https://jitpack.io/#com.github.sebbylaw/bottom-java
-[javadocs-image]: https://github.com/SebbyLaw/bottom-java/workflows/docs/badge.svg?branch=master&event=push
-[javadocs-link]: https://sebbylaw.github.io/bottom-java
+[GHAction-image]: https://github.com/bottom-software-foundation/bottom-java/workflows/CI/badge.svg?branch=master&event=push
+[GHAction-link]: https://github.com/bottom-software-foundation/bottom-java/actions?query=event%3Apush+branch%3Amaster
+[LICENSE-image]: https://img.shields.io/github/license/bottom-software-foundation/bottom-java
+[LICENSE-link]: https://github.com/bottom-software-foundation/bottom-java/blob/master/LICENSE
+[JitPack-image]: https://jitpack.io/v/com.github.bottom-software-foundation/bottom-java.svg
+[JitPack-link]: https://jitpack.io/#com.github.bottom-software-foundation/bottom-java
+[javadocs-image]: https://github.com/bottom-software-foundation/bottom-java/workflows/docs/badge.svg?branch=master&event=push
+[javadocs-link]: https://bottom-software-foundation.github.io/bottom-java

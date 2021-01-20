@@ -1,4 +1,4 @@
-package com.github.sebbylaw.bottom;
+package com.github.bottomSoftwareFoundation.bottom;
 
 /**
  * An exception thrown when decoding fails.

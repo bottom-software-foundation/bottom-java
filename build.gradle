@@ -4,8 +4,8 @@ plugins {
     id 'idea'
 }
 
-group 'io.github.sebbylaw'
-version '1.0.1'
+group 'io.github.bottomSoftwareFoundation'
+version '1.1.0'
 sourceCompatibility = 1.8
 
 repositories {

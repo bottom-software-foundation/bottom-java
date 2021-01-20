@@ -1,5 +1,5 @@
-import com.github.sebbylaw.bottom.Bottom;
-import com.github.sebbylaw.bottom.TranslationError;
+import com.github.bottomSoftwareFoundation.bottom.Bottom;
+import com.github.bottomSoftwareFoundation.bottom.TranslationError;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
