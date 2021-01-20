@@ -55,6 +55,8 @@ public class Main {
 - [bottom-c](https://github.com/LyricLy/bottom-c) (C)
 - [bottom-hs](https://github.com/LyricLy/bottom-hs) (Haskell)
 - [bottom-web](https://github.com/kaylynn234/bottom-web/) (Website at https://kaylynn234.github.io/bottom-web/)
+- [bottom_ex](https://github.com/oliver-ni/bottom_ex) (Elixir)
+- [bottom-kotlin](https://github.com/XuaTheGrate/bottom-kotlin) (Kotlin)
 
 ## Why?
 
