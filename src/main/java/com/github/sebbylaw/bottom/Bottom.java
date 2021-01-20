@@ -11,53 +11,51 @@ public final class Bottom {
     // Bottom class should not be instantiated
     private Bottom() {}
     
-    /*
-     * We use Short instead of Byte here because Java sucks and won't let me use unsigned bytes
-     */
-    private static final HashMap<Short, String> CHARACTER_VALUES = new HashMap<Short, String>() {{
-        put((short) 200, "🫂");
-        put((short) 50, "💖");
-        put((short) 10, "✨");
-        put((short) 5, "🥺");
-        put((short) 1, ",");
-        put((short) 0, "❤️");
+    private static final HashMap<Byte, String> CHARACTER_VALUES = new HashMap<Byte, String>() {{
+        put((byte) 200, "🫂");  // this is technically -56, but we don't care.
+        put((byte) 50, "💖");
+        put((byte) 10, "✨");
+        put((byte) 5, "🥺");
+        put((byte) 1, ",");
+        put((byte) 0, "❤️");
     }};
     
-    private static final HashMap<Short, String> BYTE_TO_EMOJI = new HashMap<Short, String>() {{
-        for (short i = 0; i <= 255; i++) {
+    private static final HashMap<Byte, String> BYTE_TO_EMOJI = new HashMap<Byte, String>() {{
+        for (byte i = Byte.MIN_VALUE; i < Byte.MAX_VALUE; i++) {
             put(i, byteToEmoji(i));
         }
     }};
     
-    private static final HashMap<String, Short> EMOJI_TO_BYTE = new HashMap<String, Short>() {{
-        for (Map.Entry<Short, String> entry: BYTE_TO_EMOJI.entrySet()) {
+    private static final HashMap<String, Byte> EMOJI_TO_BYTE = new HashMap<String, Byte>() {{
+        for (Map.Entry<Byte, String> entry: BYTE_TO_EMOJI.entrySet()) {
             put(trimEndMatches(entry.getValue(), "👉👈"), entry.getKey());
         }
     }};
     
-    private static String byteToEmoji(short value) {
-        StringBuilder buffer = new StringBuilder();
-        
+    private static String byteToEmoji(byte value) {
         if (value == 0){
-            return CHARACTER_VALUES.get((short) 0);
+            return CHARACTER_VALUES.get((byte) 0);
         }
         
-        while (value > 0) {
+        StringBuilder buffer = new StringBuilder();
+        short left = (short) (value & 0xFF);
+        
+        while (left > 0) {
             short subtractBy;
-            if (value >= 200) {
+            if (left >= 200) {
                 subtractBy = 200;
-            } else if (value >= 50) {
+            } else if (left >= 50) {
                 subtractBy = 50;
-            } else if (value >= 10) {
+            } else if (left >= 10) {
                 subtractBy = 10;
-            } else if (value >= 5) {
+            } else if (left >= 5) {
                 subtractBy = 5;
             } else {
                 subtractBy = 1;
             }
             
-            buffer.append(CHARACTER_VALUES.get(subtractBy));
-            value -= subtractBy;
+            buffer.append(CHARACTER_VALUES.get((byte) subtractBy));
+            left -= subtractBy;
         }
         
         buffer.append("👉👈");
@@ -70,12 +68,12 @@ public final class Bottom {
         return result;
     }
     
-    private static String encodeByte(final short value) {
+    private static String encodeByte(final byte value) {
         return BYTE_TO_EMOJI.get(value);
     }
     
-    private static Short decodeByte(final String input) throws TranslationError {
-        Short result = EMOJI_TO_BYTE.get(input);
+    private static Byte decodeByte(final String input) throws TranslationError {
+        Byte result = EMOJI_TO_BYTE.get(input);
         if (result == null) throw new TranslationError("Could not decode character " + input, input);
         return result;
     }
@@ -89,7 +87,7 @@ public final class Bottom {
         StringBuilder buf = new StringBuilder();
         
         for (byte b: input.getBytes(StandardCharsets.UTF_8)) {
-            buf.append(encodeByte((short) (b & 0xFF)));
+            buf.append(encodeByte(b));
         }
         
         return buf.toString();
@@ -112,7 +110,7 @@ public final class Bottom {
         byte[] buf = new byte[arr.length];
         
         for (int i = 0; i < arr.length; i++) {
-            buf[i] = decodeByte(arr[i]).byteValue();
+            buf[i] = decodeByte(arr[i]);
         }
         
         return new String(buf);
