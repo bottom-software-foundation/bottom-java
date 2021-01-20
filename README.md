@@ -1,4 +1,4 @@
-# bottom
+# bottom-java
 
 [![Build Status][GHAction-image]][GHAction-link]
 [![LICENSE][LICENSE-image]][LICENSE-link]
