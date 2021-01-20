@@ -16,7 +16,7 @@ You can install bottom [from JitPack][JitPack-link]
 Add bottom to your Gradle project by adding these lines to your `build.gradle` file:
 ```groovy
 repositories {
-	 // other repositories
+     // other repositories
      mavenCentral()
      maven { url 'https://jitpack.io' }
 }
