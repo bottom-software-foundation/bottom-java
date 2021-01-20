@@ -3,10 +3,11 @@
 [![Build Status][GHAction-image]][GHAction-link]
 [![LICENSE][LICENSE-image]][LICENSE-link]
 [![JitPack][JitPack-image]][JitPack-link]
+[![docs][javadocs-image]][javadocs-link]
 
 A Gradle library for [bottom](https://github.com/kaylynn234/bottom), following the [bottom spec](https://github.com/kaylynn234/bottom-spec).
 
-Javadocs [here](https://jitpack.io/com/github/sebbylaw/bottom-java/latest/javadoc/)
+Javadocs [here][javadocs-link]
 
 ## Installing
 
@@ -63,3 +64,5 @@ Learning project for Gradle, JUnit4, Github Actions, and JitPack.
 [LICENSE-link]: https://github.com/SebbyLaw/bottom-java/blob/master/LICENSE
 [JitPack-image]: https://jitpack.io/v/com.github.sebbylaw/bottom-java.svg
 [JitPack-link]: https://jitpack.io/#com.github.sebbylaw/bottom-java
+[javadocs-image]: https://github.com/SebbyLaw/bottom-java/workflows/docs/badge.svg?branch=master&event=push
+[javadocs-link]: https://sebbylaw.github.io/bottom-java
