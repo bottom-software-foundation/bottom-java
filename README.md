@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
      // other dependencies
-     implementation 'com.github.sebbylaw:bottom:1.0.0'
+     implementation 'com.github.sebbylaw:bottom-java:1.0.0'
 }
 ```
 
