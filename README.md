@@ -61,5 +61,5 @@ Learning project for Gradle, JUnit4, Github Actions, and JitPack.
 [GHAction-link]: https://github.com/SebbyLaw/bottom-java/actions?query=event%3Apush+branch%3Amaster
 [LICENSE-image]: https://img.shields.io/github/license/SebbyLaw/bottom-java
 [LICENSE-link]: https://github.com/SebbyLaw/bottom-java/blob/master/LICENSE
-[JitPack-image]: https://jitpack.io/v/com.github.sebbylaw/bottom.svg
-[JitPack-link]: https://jitpack.io/#com.github.sebbylaw/bottom
+[JitPack-image]: https://jitpack.io/v/com.github.sebbylaw/bottom-java.svg
+[JitPack-link]: https://jitpack.io/#com.github.sebbylaw/bottom-java
