@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.bottomSoftwareFoundation'
-version '1.1.0'
+version '2.0.0'
 sourceCompatibility = 1.8
 
 repositories {
