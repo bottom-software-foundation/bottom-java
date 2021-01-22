@@ -4,7 +4,7 @@ plugins {
     id 'idea'
 }
 
-group 'io.github.bottomSoftwareFoundation'
+group 'com.github.bottomSoftwareFoundation'
 version '1.1.0'
 sourceCompatibility = 1.8
 
