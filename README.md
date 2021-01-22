@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
      // other dependencies
-     implementation 'com.github.bottom-software-foundation:bottom-java:1.1.0'  // latest stable release
+     implementation 'com.github.bottom-software-foundation:bottom-java:2.0.0'  // latest stable release
      // alternatively...
      implementation 'com.github.bottom-software-foundation:bottom-java:need_top-SNAPSHOT'  // latest commit on github
 }
