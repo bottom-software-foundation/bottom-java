@@ -11,6 +11,8 @@ public final class Bottom {
     // Bottom class should not be instantiated
     private Bottom() {}
     
+    private static final String SECTION_SEPARATOR = "\uD83D\uDC49\uD83D\uDC48";
+    
     private static final HashMap<Byte, String> CHARACTER_VALUES = new HashMap<Byte, String>() {{
         put((byte) 200, "🫂");  // this is technically -56, but we don't care.
         put((byte) 50, "💖");
@@ -28,7 +30,7 @@ public final class Bottom {
     
     private static final HashMap<String, Byte> EMOJI_TO_BYTE = new HashMap<String, Byte>() {{
         for (Map.Entry<Byte, String> entry: BYTE_TO_EMOJI.entrySet()) {
-            put(trimEndMatches(entry.getValue(), "👉👈"), entry.getKey());
+            put(trimEndMatches(entry.getValue(), SECTION_SEPARATOR), entry.getKey());
         }
     }};
     
@@ -58,7 +60,7 @@ public final class Bottom {
             left -= subtractBy;
         }
         
-        buffer.append("👉👈");
+        buffer.append(SECTION_SEPARATOR);
         return buffer.toString();
     }
     
@@ -105,7 +107,7 @@ public final class Bottom {
         String[] arr = input.contains("\u200B")
                 // Older versions used a ZWSP as a character separator, instead of `👉👈`.
                 ? trimEndMatches(input,"\u200B").split("\u200B")
-                : trimEndMatches(input, "👉👈").split("👉👈");
+                : trimEndMatches(input, SECTION_SEPARATOR).split(SECTION_SEPARATOR);
         
         byte[] buf = new byte[arr.length];
         
