@@ -7,10 +7,7 @@ import org.junit.runners.Suite;
 import static org.junit.Assert.*;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({
-        TestBottom.Encode.class,
-        TestBottom.Decode.class,
-})
+@Suite.SuiteClasses({})
 public class TestBottom {
     public static class Encode {
         private static void testEncode(String input, String expected) {
