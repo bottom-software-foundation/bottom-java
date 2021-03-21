@@ -35,14 +35,10 @@ public final class Bottom {
     }};
     
     private static String byteToEmoji(byte value) {
-        if (value == 0){
-            return CHARACTER_VALUES.get((byte) 0);
-        }
-        
         StringBuilder buffer = new StringBuilder();
         short left = (short) (value & 0xFF);
         
-        while (left > 0) {
+        do {
             short subtractBy;
             if (left >= 200) {
                 subtractBy = 200;
@@ -52,13 +48,15 @@ public final class Bottom {
                 subtractBy = 10;
             } else if (left >= 5) {
                 subtractBy = 5;
-            } else {
+            } else if (left >= 1){
                 subtractBy = 1;
+            } else {
+                subtractBy = 0;
             }
             
             buffer.append(CHARACTER_VALUES.get((byte) subtractBy));
             left -= subtractBy;
-        }
+        } while (left > 0);
         
         buffer.append(SECTION_SEPARATOR);
         return buffer.toString();
